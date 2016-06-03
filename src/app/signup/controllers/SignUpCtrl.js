@@ -5,9 +5,25 @@ module.exports = SignUpCtrl;
 /**
  * @ngInject
  */
-function SignUpCtrl(UserService) {
+function SignUpCtrl($scope, UserService) {
     var vm = this;
 
-    vm.signUp = UserService.create;
-}
+    $scope.signupParams = {
+      username : null,
+      password : null,
+      passwordConfirm: null
+    };
 
+    $scope.submit = () => {
+      var params = $scope.signupParams;
+      if(params.username == null || params.password == null) {
+        return;
+      }
+      else if (params.password !== params.passwordConfirm) {
+        return;
+      }
+      else {
+        UserService.createUser(params)
+      }
+    }
+}

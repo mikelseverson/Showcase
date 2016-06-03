@@ -6,7 +6,9 @@ require('angular')
         require('angular-ui-router'),
 
         /* Custom */
-        require('../signup')
+        require('../dashboard'),
+        require('../signup'),
+        require('../login')
     ])
     .config(require('./config'))
     .config(require('./route'));

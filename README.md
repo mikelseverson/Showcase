@@ -6,7 +6,11 @@ prowess.
 
 ### Getting Started
 
+<<<<<<< 5edf46302a1f99f9b323134aafd86ac15779ad72
 Please begin by forking (please do not clone, forking allows us to see your changes more easily) this repo to your own Github account. You'll push changes to your own repo and we'll 
+=======
+Please begin by forking this repo to your own Github account. You'll push changes to your own repo and we'll 
+>>>>>>> first commit
 review from there.
 
 You will need to have npm installed. Clone the repository locally and run `npm install`. You can then 

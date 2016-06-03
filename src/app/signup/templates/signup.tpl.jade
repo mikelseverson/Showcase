@@ -1,4 +1,27 @@
-h1 Sign Up
-div
-    button.btn.btn-default(ng-click='vm.signUp()') Create User
-a(ui-sref="home") Home
+block content
+  .container
+    form.form-signin(name="signupForm" ng-submit="submit()" novalidate)
+      h2.form-signin-heading Join
+
+      <!-- Username -->
+      .form-group(ng-class="{ 'has-error' : signupForm.username.$invalid && !signupForm.username.$pristine }")
+      input.form-control(type="text" name="username" ng-model="signupParams.username" placeholder="Username" required)
+      p.help-block(ng-show="signupForm.username.$invalid && !signupForm.username.$pristine") A username is required.
+
+      <!-- Password -->
+      .form-group(ng-class="{ 'has-error' : signupForm.password.$invalid && !signupForm.password.$pristine }")
+      input.form-control(type="password" name="password" ng-model="signupParams.password" placeholder="Password" required)
+      p.help-block(ng-show="signupForm.password.$invalid && !signupForm.password.$pristine") A password is required.
+
+      <!-- Password confirmation -->
+      .form-group(ng-class="{ 'has-error' : signupForm.passwordConfirm.$invalid && !signupForm.passwordConfirm.$pristine }")
+      input.form-control(type="password" name="password" ng-model="signupParams.passwordConfirm" placeholder="Password" required)
+      p.help-block(ng-show="signupForm.passwordConfirm.$invalid && !signupForm.passwordConfirm.$pristine") A password is required.
+
+      br
+
+      button.btn.btn-large.btn-primary(type="submit" ng-disabled="signupForm.$invalid") Join
+
+      div.form-group
+          p Already a member?
+              a(ui-sref="login")  Login
