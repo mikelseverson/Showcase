@@ -1,0 +1,23 @@
+block content
+  .container
+    form.form-signin(name="loginForm" ng-submit="submit()" novalidate)
+      h2.form-signin-heading Login
+
+      <!-- Username -->
+      .form-group(ng-class="{ 'has-error' : loginForm.username.$invalid && !loginForm.username.$pristine }")
+      input.form-control(type="text" name="username" ng-model="loginParams.username" placeholder="Username" required)
+      p.help-block(ng-show="loginForm.username.$invalid && !loginForm.username.$pristine") A username is required.
+
+      <!-- Password -->
+      .form-group(ng-class="{ 'has-error' : loginForm.password.$invalid && !loginForm.password.$pristine }")
+      input.form-control(type="password" name="password" ng-model="loginParams.password" placeholder="Password" required)
+      p.help-block(ng-show="loginForm.password.$invalid && !loginForm.password.$pristine") A password is required.
+
+      br
+
+      button.btn.btn-large.btn-primary(type="submit" ng-disabled="loginForm.$invalid") Login
+
+
+      div.form-group
+          p Need an Account?
+              a(ui-sref="signup")  Join
