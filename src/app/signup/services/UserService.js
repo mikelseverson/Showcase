@@ -26,11 +26,9 @@ function UserService($state) {
   function checkStatus() {
     if (loggedIn === false) {
       $state.go('home');
-      return;
     }
     else {
       $state.go('dashboard');
-      return;
     }
   }
 
