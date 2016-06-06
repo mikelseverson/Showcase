@@ -1155,8 +1155,11 @@
         }
       }
     },
+<<<<<<< HEAD
 <<<<<<< 5edf46302a1f99f9b323134aafd86ac15779ad72
 =======
+=======
+>>>>>>> 16bac01ec9a4353d76de23b8ca9601881a06929c
     "firebase": {
       "version": "3.0.3",
       "from": "firebase@*",
@@ -1347,7 +1350,10 @@
         }
       }
     },
+<<<<<<< HEAD
 >>>>>>> first commit
+=======
+>>>>>>> 16bac01ec9a4353d76de23b8ca9601881a06929c
     "first-chunk-stream": {
       "version": "1.0.0",
       "from": "first-chunk-stream@>=1.0.0 <2.0.0",
