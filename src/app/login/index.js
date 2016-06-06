@@ -5,6 +5,6 @@ module.exports = require('angular')
         require('angular-ui-router')
     ])
     .config(require('./route'))
-    .factory('UserService', require('../signup/services/UserService'))
+    .factory('UserService', require('../showcase/services/UserService'))
     .controller('LoginCtrl', require('./controllers/LoginCtrl'))
     .name;
