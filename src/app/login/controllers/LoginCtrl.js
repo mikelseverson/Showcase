@@ -6,16 +6,18 @@ module.exports = LoginCtrl;
  * @ngInject
  */
 function LoginCtrl($scope, UserService) {
+  var vm = this;
 
   $scope.loginParams = {
      username: null,
      password: null
    };
 
-  $scope.submitForm = function() {
+  vm.login = function() {
     var params = $scope.loginParams;
+
     if(params.username === null || params.password === null) {
-      return;
+      alert('Please enter a username and a password');
     }
     else {
       UserService.login(params);

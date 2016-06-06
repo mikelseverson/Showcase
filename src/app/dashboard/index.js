@@ -8,5 +8,5 @@ module.exports = require('angular')
     .controller('DashboardCtrl', require('./controllers/DashboardCtrl'))
     .directive('articleCard', require('./directives/article-card'))
     .factory('DataService', require('./services/DataService'))
-    .factory('UserService', require('../signup/services/UserService'))
+    .factory('UserService', require('../showcase/services/UserService'))
     .name;

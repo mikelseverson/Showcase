@@ -41,7 +41,8 @@ function UserService($state) {
    function createUser(newUser) {
       for (var i = 0; i < userDB.length; i++) {
           if (newUser.username === userDB[i].username) {
-              return 'This username is already in use';
+            alert('This username is already in use');
+            return;
           }
       }
       userDB.push(newUser);
@@ -62,7 +63,7 @@ function UserService($state) {
               return;
           }
       }
-      return 'Username / Password not found.';
+      alert('Username / Password not found.');
   }
 
   /**

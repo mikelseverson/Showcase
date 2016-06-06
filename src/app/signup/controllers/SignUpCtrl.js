@@ -9,21 +9,21 @@ function SignUpCtrl($scope, UserService) {
     var vm = this;
 
     $scope.signupParams = {
-      username : null,
-      password : null,
+      username: null,
+      password: null,
       passwordConfirm: null
     };
 
-    $scope.submit = () => {
+    vm.signup = function() {
       var params = $scope.signupParams;
-      if(params.username == null || params.password == null) {
-        return;
+      if(params.username === null || params.password === null) {
+        alert('Please enter a username and password');
       }
       else if (params.password !== params.passwordConfirm) {
-        return;
+        alert('Passwords don\'t match');
       }
       else {
-        UserService.createUser(params)
+        UserService.createUser(params);
       }
-    }
+    };
 }
